@@ -50,7 +50,7 @@ public class FinderFile {
         }
         if ("mask".equals(typeSearch)) {
             condition = path -> {
-                String regex = name;
+                String regex = name.replace(".", "\\.");
                 if (regex.contains("*")) {
                     regex = regex.replace("*", "\\w+");
                 }
